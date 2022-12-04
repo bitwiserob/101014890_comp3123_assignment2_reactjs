@@ -11,6 +11,9 @@ import EmployeeAdd from "./components/pages/employeeAdd";
 import EmployeeUpdate from "./components/pages/employeUpdate";
 import EmployeeDelete from "./components/pages/employeeDelete";
 import NavbarMain from "./components/navbar/navbar";
+import Signup from "./components/forms/signup";
+import SignOut from "./components/pages/signout";
+import SignUp from "./components/pages/signup";
 
 
 
@@ -26,6 +29,9 @@ function App() {
                 <Route path="/view" element ={<EmployeeView/>} />
                 <Route path="/add" element ={<EmployeeAdd/>} />
                 <Route path="/update" element ={<EmployeeUpdate/>} />
+                <Route path="/delete" element ={<EmployeeDelete/>} />
+                <Route path="/signup" element ={<SignUp/>} />
+                <Route path="/signout" element ={<SignOut/>} />
                 <Route path="/delete" element ={<EmployeeDelete/>} />
             </Routes>
         </Router>

@@ -1,7 +1,7 @@
-const Signup = ()=>{
+const SignUpForm = ()=>{
     return<>
         <p>FORM GOES HERE</p>
     </>
 }
 
-export default Signup;
+export default SignUpForm;
