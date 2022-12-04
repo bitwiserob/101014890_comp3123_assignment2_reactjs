@@ -1,6 +1,8 @@
+import SignUpForm from "../forms/signup";
+
 const SignUp = () =>{
     return <>
-        <p>SIGN UP</p>
+        <SignUpForm></SignUpForm>
     </>;
 }
 

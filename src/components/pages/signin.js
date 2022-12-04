@@ -1,6 +1,6 @@
 const SignIn = () =>{
     return <>
-        <p>SIGN IN</p>
+        
     </>;
 }
 

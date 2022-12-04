@@ -1,10 +1,16 @@
 .App {
-  text-align: center;
+
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.app-body{
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 2px 2px
 }
 
 @media (prefers-reduced-motion: no-preference) {

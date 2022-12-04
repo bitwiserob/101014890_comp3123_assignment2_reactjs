@@ -22,19 +22,21 @@ function App() {
   return (
     <div className="App">
         <NavbarMain></NavbarMain>
+        <div className={"app-body shadow p-3 border-3 mt-2"}>
+            <Router>
+                <Routes>
+                    <Route path="/" element ={<SignIn/>} />
+                    <Route path="/view" element ={<EmployeeView/>} />
+                    <Route path="/add" element ={<EmployeeAdd/>} />
+                    <Route path="/update" element ={<EmployeeUpdate/>} />
+                    <Route path="/delete" element ={<EmployeeDelete/>} />
+                    <Route path="/signup" element ={<SignUp/>} />
+                    <Route path="/signout" element ={<SignOut/>} />
+                    <Route path="/delete" element ={<EmployeeDelete/>} />
+                </Routes>
+            </Router>
+        </div>
 
-        <Router>
-            <Routes>
-                <Route path="/" element ={<SignIn/>} />
-                <Route path="/view" element ={<EmployeeView/>} />
-                <Route path="/add" element ={<EmployeeAdd/>} />
-                <Route path="/update" element ={<EmployeeUpdate/>} />
-                <Route path="/delete" element ={<EmployeeDelete/>} />
-                <Route path="/signup" element ={<SignUp/>} />
-                <Route path="/signout" element ={<SignOut/>} />
-                <Route path="/delete" element ={<EmployeeDelete/>} />
-            </Routes>
-        </Router>
     </div>
   );
 }
