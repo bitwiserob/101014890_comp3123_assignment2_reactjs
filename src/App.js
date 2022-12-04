@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import ReactDOM from "react-dom/client";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route ,Link, Routes} from "react-router-dom";
 
@@ -9,6 +10,7 @@ import SignIn from "./components/pages/signin";
 import EmployeeAdd from "./components/pages/employeeAdd";
 import EmployeeUpdate from "./components/pages/employeUpdate";
 import EmployeeDelete from "./components/pages/employeeDelete";
+import NavbarMain from "./components/navbar/navbar";
 
 
 
@@ -16,6 +18,8 @@ function App() {
 
   return (
     <div className="App">
+        <NavbarMain></NavbarMain>
+
         <Router>
             <Routes>
                 <Route path="/" element ={<SignIn/>} />
