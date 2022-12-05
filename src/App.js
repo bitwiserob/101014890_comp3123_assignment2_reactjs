@@ -15,6 +15,7 @@ import Signup from "./components/forms/signup";
 import SignOut from "./components/pages/signout";
 import SignUp from "./components/pages/signup";
 import EmployeeViewOne from "./components/pages/employeeViewOne";
+import UpdateEmpForm from "./components/forms/update";
 
 
 
@@ -30,7 +31,7 @@ function App() {
                     <Route path="/view" element ={<EmployeeView/>} />
                     <Route path="/view/:emp_id" element ={<EmployeeViewOne/>} />
                     <Route path="/add" element ={<EmployeeAdd/>} />
-                    <Route path="/update" element ={<EmployeeUpdate/>} />
+                    <Route path="/update/:emp_id" element ={<UpdateEmpForm/>} />
                     <Route path="/delete" element ={<EmployeeDelete/>} />
                     <Route path="/signup" element ={<SignUp/>} />
                     <Route path="/signout" element ={<SignOut/>} />

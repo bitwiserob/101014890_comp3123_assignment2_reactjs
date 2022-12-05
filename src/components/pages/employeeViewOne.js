@@ -13,15 +13,16 @@ const EmployeeView = () => {
                 // setEmpData(response.data);
                 console.log("RESPONSE IS")
 
-                console.log(response.data['sucess'])
-                setEmpData(response.data['sucess'])
+                console.log(response.data)
+                setEmpData(response.data)
             }).catch(reason => console.log(reason))
     }, [])
-    console.log(empData['success']);
     return <>
-        <h2>Manage employees</h2>
-        <Button variant="primary" href={"/add"} className={"mb-2"}>Add</Button>
-        <ManageEmployeeTable data={empData}></ManageEmployeeTable>
+        <h2>Employee Name: {empData.first_name} {empData.first_name}</h2>
+        <h4>Employee Gender: {empData.gender}</h4>
+        <h4>Employee Salary: {empData.salary}</h4>
+        <h4>Employee Email : {empData.email}</h4>
+
     </>;
 }
 

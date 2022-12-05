@@ -22,9 +22,9 @@ function ManageEmployeeTable({data}) {
                         <td>{data.first_name}</td>
                         <td>{data.first_name}</td>
                         <td>{data.email}</td>
-                        <td><Button className={"btn-danger"}>Delete</Button></td>
-                        <td><Button>Update</Button></td>
-                        <td><Link to={`/view/${data._id}`} >View</Link></td>
+                        <td><Link to={`/delete/${data._id}`} className={"btn btn-danger "}>Delete</Link></td>
+                        <td><Link to={`/update/${data._id}`} className={"btn btn-primary "}>Update</Link></td>
+                        <td><Link to={`/view/${data._id}`} className={"btn btn-primary "}>View</Link></td>
                     </tr>
                     </tbody>
                 )

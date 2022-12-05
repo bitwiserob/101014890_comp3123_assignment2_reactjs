@@ -1,6 +1,6 @@
 const EmployeeView = () => {
     return <>
-        <p>DELETE PAGE</p>
+        <p>EMPLOYEE DELETED</p>
     </>;
 }
 
