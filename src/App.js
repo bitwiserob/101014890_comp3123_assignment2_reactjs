@@ -14,6 +14,7 @@ import NavbarMain from "./components/navbar/navbar";
 import Signup from "./components/forms/signup";
 import SignOut from "./components/pages/signout";
 import SignUp from "./components/pages/signup";
+import EmployeeViewOne from "./components/pages/employeeViewOne";
 
 
 
@@ -27,6 +28,7 @@ function App() {
                 <Routes>
                     <Route path="/" element ={<SignIn/>} />
                     <Route path="/view" element ={<EmployeeView/>} />
+                    <Route path="/view/:emp_id" element ={<EmployeeViewOne/>} />
                     <Route path="/add" element ={<EmployeeAdd/>} />
                     <Route path="/update" element ={<EmployeeUpdate/>} />
                     <Route path="/delete" element ={<EmployeeDelete/>} />
