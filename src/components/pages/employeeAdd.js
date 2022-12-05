@@ -1,7 +1,9 @@
+import AddEmpForm from "../forms/add";
+
 const EmployeeAdd = () => {
     return <>
-        <p>ADD PAGE</p>
+        <AddEmpForm></AddEmpForm>
     </>;
 }
 
-export default EmployeeAdd;
+export default AddEmpForm;
