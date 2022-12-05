@@ -18,7 +18,7 @@ const EmployeeView = () => {
             }).catch(reason => console.log(reason))
     }, [])
     return <>
-        <h2>Employee Name: {empData.first_name} {empData.first_name}</h2>
+        <h2>Employee Name: {empData.first_name} {empData.last_name}</h2>
         <h4>Employee Gender: {empData.gender}</h4>
         <h4>Employee Salary: {empData.salary}</h4>
         <h4>Employee Email : {empData.email}</h4>

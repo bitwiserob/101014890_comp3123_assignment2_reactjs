@@ -4,4 +4,4 @@ const EmployeeUpdate = () => {
     </>;
 }
 
-export default EmployeeUpdate
+export default EmployeeUpdate;

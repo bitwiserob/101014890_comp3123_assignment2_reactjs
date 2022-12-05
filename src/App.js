@@ -32,10 +32,9 @@ function App() {
                     <Route path="/view/:emp_id" element ={<EmployeeViewOne/>} />
                     <Route path="/add" element ={<EmployeeAdd/>} />
                     <Route path="/update/:emp_id" element ={<UpdateEmpForm/>} />
-                    <Route path="/delete" element ={<EmployeeDelete/>} />
+                    <Route path="/delete/:emp_id" element ={<EmployeeDelete/>} />
                     <Route path="/signup" element ={<SignUp/>} />
                     <Route path="/signout" element ={<SignOut/>} />
-                    <Route path="/delete" element ={<EmployeeDelete/>} />
                 </Routes>
             </Router>
         </div>

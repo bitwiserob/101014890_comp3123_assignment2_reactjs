@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import {useState} from "react";
 import axios from "axios";
 const AddEmpForm = ()=>{
-   let [employee, setEmployee] = useState({first_name:"",last_name:"", email:"", gender:"other", salary:0});
+   let [message, setMessage] = useState()
+    let [employee, setEmployee] = useState({first_name:"",last_name:"", email:"", gender:"other", salary:0});
     const clickHandle = ()=>{
         console.log(employee);
         axios.post(`https://101014890-comp-3123-assignment1.vercel.app/api/employee/`,
@@ -11,17 +12,25 @@ const AddEmpForm = ()=>{
             .then((response) => {
                 console.log("RESPONSE IS")
                 console.log(response)
+                setMessage("USER ADDED")
 
                 
-            }).catch(reason => console.log(reason))
+            }).catch(reason => {
+            console.log(reason);
+            setMessage("USER NOT ADDED");
+
+        })
     }
 
     const handleSubmit = (event)=>{
         event.preventDefault();
     }
     return<>
+        {message &&
+            <div className={'alert alert-primary'}> {message} </div>
+        }
         <Form onSubmit={handleSubmit}>
-            <Form.Label><h2>Add Emp</h2></Form.Label>
+            <Form.Label><h2>Add Employee</h2></Form.Label>
             <Form.Group className={"mb-3"}>
                 <Form.Label>First Name</Form.Label>
                 <Form.Control value={employee['first_name']} onChange={(e) => setEmployee(

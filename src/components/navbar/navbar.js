@@ -13,12 +13,7 @@ const NavbarMain = () =>{
                     <Nav className="me-auto">
                         <Nav.Link href="/view">Manage</Nav.Link>
                     </Nav>
-                    <Nav>
-                        <Nav.Link href="/signup">Sign up</Nav.Link>
-                        <Nav.Link href="/signout">Sign out</Nav.Link>
-                        <Nav.Link href="/" className={"justify-content-end"}>Sign in</Nav.Link>
 
-                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

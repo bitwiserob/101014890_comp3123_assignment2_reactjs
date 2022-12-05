@@ -6,6 +6,8 @@ import {useParams} from "react-router-dom";
 const UpdateEmpForm = ()=>{
     let [employee, setEmployee] = useState({first_name:"",last_name:"", email:"", gender:"other", salary:0});
     let { emp_id } = useParams();
+    let [message, setMessage] = useState()
+
     useEffect(() => {
         axios.get(`https://101014890-comp-3123-assignment1.vercel.app/api/employee/${emp_id}`)
             .then((response) => {
@@ -24,15 +26,22 @@ const UpdateEmpForm = ()=>{
             .then((response) => {
                 console.log("RESPONSE IS")
                 console.log(response)
+                setMessage("USER UPDATED")
 
 
-            }).catch(reason => console.log(reason))
+            }).catch(reason => {
+            console.log(reason);
+            setMessage("USER NOT UPDATED")
+        })
     }
 
     const handleSubmit = (event)=>{
         event.preventDefault();
     }
     return<>
+        {message &&
+            <div className={'alert alert-primary'}> {message} </div>
+        }
         <Form onSubmit={handleSubmit}>
             <Form.Label><h2>Update Employee</h2></Form.Label>
             <Form.Group className={"mb-3"}>
